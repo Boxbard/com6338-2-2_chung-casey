@@ -9,4 +9,13 @@ function greet() {
     console.log(parseInt(age));
 
     // confirm method
+    var currentYear = new Date().getFullYear();
+    var birthdayPassed = (currentYear - age);
+    var birthdayNotPassed = (currentYear - age - 1);
+
+    if (confirm("Have you had a birthday this year?")) {
+        alert("Is your birthday in " + birthdayPassed + "?");
+    } else {
+        alert("Your birthday is on " + birthdayNotPassed + "?");
+    }
 }
